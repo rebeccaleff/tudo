@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from "react-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import Counter from './components/counter.jsx';
 
-const element = <h1>Hello World</h1>;
 
-render(element, document.getElementById('root'));
+render(<Counter />, document.getElementById('root'));
