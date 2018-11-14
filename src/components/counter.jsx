@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
+import { getMovies, saveMovie, deleteMovie } from './../data/fakeMovieService';
+
 
 export default class Counter extends Component {
   state = { 
-    count: 1,
+    count: 0,
     imageUrl: 'https://picsum.photos/200',
     tags: ['tag1', 'tag2', 'tag3']
   };
   
-  render() { 
+  render() {
 
     return (
-    <React.Fragment>
+    <div>
       <span className={this.getBadgeClasses()}>{this.state.count}</span>
-      <button className='btn btn-secondary btn-sm'>Increment</button>
+      <button className='btn btn-secondary btn-sm' onClick={() => this.increment()}>Increment</button>
       <ul>
         {this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}
       </ul>
-    </React.Fragment>
+    </div>
     );
+  }
+
+  increment = () => {
+    this.setState({count: this.state.count + 1 });
   }
 
   getBadgeClasses() {
@@ -27,4 +33,3 @@ export default class Counter extends Component {
   }
 
 }
- 
