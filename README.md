@@ -1,4 +1,4 @@
-Tudo is "all" in Portuguese. This repo is a workspace to learn new React features and utilize best practices.
+Tudo is "all" in Portuguese. This repo is a workspace to learn new React features and utilize best practices. Examples include a Bootstrap table which dynamically renders rows with an optional delete button. 
 
 ### `npm start`
 
